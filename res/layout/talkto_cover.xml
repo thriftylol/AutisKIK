@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/talk_to_cover_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:id="@id/talkto_delete" android:background="@xml/chat_delete_button_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_ignore" android:drawableLeft="@drawable/icon_delete_active" android:drawablePadding="8.0dip" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/talkto_accept" android:background="@xml/chat_chat_button_selector" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <kik.android.widget.RobotoTextView android:textSize="18.0dip" android:textColor="@color/white" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/title_chat" android:drawableLeft="@drawable/icon_chat_active" android:drawablePadding="8.0dip" />
+    </LinearLayout>
+</merge>

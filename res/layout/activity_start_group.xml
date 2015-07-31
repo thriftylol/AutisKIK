@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/start_group_root" android:background="@color/chat_info_background" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/start_group_topbar" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="@dimen/native_topbar_height">
+        <include layout="@layout/kik_back_button_with_group_count" />
+        <ImageView android:layout_gravity="right" android:id="@id/start_group_create_button" android:background="@xml/topbar_button_selector" android:padding="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/done_grey_disabled" />
+    </FrameLayout>
+    <RelativeLayout android:id="@id/start_group_header" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="168.0dip">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+            <ImageView android:id="@id/group_contact_picture" android:layout_width="84.0dip" android:layout_height="84.0dip" android:layout_marginLeft="16.0dip" android:src="@xml/set_photo_icon_selector" android:scaleType="centerCrop" />
+            <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <kik.android.widget.RobotoEditText android:textSize="20.0sp" android:id="@id/group_name_edittext" android:background="@color/white" android:paddingLeft="16.0dip" android:paddingTop="8.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_name_hint" android:maxLength="100" android:inputType="textCapSentences" />
+                <View android:id="@id/start_group_divider" android:background="@color/start_group_divider_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="17.0dip" />
+                <kik.android.widget.RobotoEditText android:textSize="20.0sp" android:id="@id/group_tag_edittext" android:background="@color/white" android:paddingLeft="16.0dip" android:paddingTop="7.0dip" android:paddingRight="16.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/group_tag_hint" android:maxLength="32" android:drawablePadding="8.0dip" android:inputType="textVisiblePassword" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_status_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginBottom="-2.0dip" android:layout_above="@id/group_status_description_text">
+            <TextView android:id="@id/group_status_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/group_status_invite_only" />
+        </LinearLayout>
+        <TextView android:textColor="@color/conversation_is_typing" android:id="@id/group_status_description_text" android:paddingBottom="16.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:text="@string/invite_only_description" android:layout_above="@id/profile_box_underline" />
+        <TextView android:textColor="@color/material_blue" android:gravity="center" android:id="@id/change_group_status_button" android:background="@drawable/text_button_selector" android:padding="8.0dip" android:layout_width="88.0dip" android:layout_height="36.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="16.0dip" android:text="@string/change_group_status" android:layout_toLeftOf="@id/group_status_description_text" android:layout_above="@id/profile_box_underline" android:layout_alignParentRight="true" />
+        <View android:id="@id/profile_box_underline" android:background="@color/start_group_divider_color" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+        <FrameLayout android:id="@id/chat_top_shadow" android:background="@drawable/cell_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <View android:id="@id/padding" android:layout_width="fill_parent" android:layout_height="12.0dip" />
+    <ListView android:id="@id/group_member_grid" android:clipToPadding="false" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@null" />
+</LinearLayout>
